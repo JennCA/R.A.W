@@ -1,0 +1,134 @@
+/* vista book font */
+@font-face {
+    font-family: VistaSansBook;
+    src: url(../../NhS_frontend_example/fonts/VistaSansBook.woff);
+}
+
+/* vista med font */
+@font-face {
+    font-family: VistaSansMed;
+    src: url(../../NhS_frontend_example/fonts/VistaSansMed.woff);
+}
+
+/* vista reg font */
+@font-face {
+    font-family: VistaSansReg;
+    src: url(../../NhS_frontend_example/fonts/VistaSansReg.woff);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #282828;
+    font-family: VistaSansReg;
+}
+
+h1 {
+    margin-top: 120px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-family: VistaSansMed;
+    font-size: xxx-large;
+}
+
+/* list */
+ul.list {
+    padding: 0;
+    list-style: none;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0px 0px 25px #00000070;
+    clear: both;
+    display: table;
+}
+
+/* accordions */
+ul.list .accordion {
+    border-bottom: 1px solid #324252;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    height: 50px;
+    vertical-align: sub;
+    background: #3e5165;
+    clear: both;
+}
+
+ul.list .accordion a {
+    text-decoration: none;
+    color: #00FFFF;
+    padding: 16px 0px 16px 45px;
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: VistaSansBook;
+}
+
+ul.list .accordion a:hover {
+    background-color: #324252;
+    transition: 300ms all;
+    color: #FFFF00;
+}
+
+ul.list .active > a {
+    color: #FFFF00;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+ul.list .active .accordion {
+    background: #446385;
+}
+
+/* accordion items */
+ul.list .accordion .items {
+    height: 0px;
+    overflow: hidden;
+}
+
+ul.list .accordion .items .sub {
+    padding: 0px;
+}
+
+ul.list .accordion .items li {
+    padding: 16px;
+}
+
+ul.list .accordion:last-child {
+    border-bottom: none;
+}
+
+ul.list .active > .items {
+    display: block;
+    background: #23313f;
+    padding: 0px;
+    height: auto;
+    color: #fff;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 200ms;
+    clear: both;
+    float: left;
+    width: 100%;
+}
+
+ul.list .active > .items li {
+    border-bottom: 1px solid #324252;
+    list-style: none;
+}
+
+ul.list .active > .items li:last-child {
+    border-color: transparent;
+}
+
+ul.list .active > .items .active > .items {
+    background-color: #23313f;
+}
+
+/* for mobile phones */
+@media only screen and (max-width: 670px) {
+    h1 {
+      font-size: xx-large;
+    }
+}
